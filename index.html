@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css" type="text/css">
-    <script 
+    <!-- Archivo .js por cdn para generar QR -->
+    <!-- <script 
         src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" 
         integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" 
         crossorigin="anonymous" 
         referrerpolicy="no-referrer">
-    </script>
+    </script> -->
+    <script src="js/filesaver.js" type="text/javascript" defer></script>
+    <script src="js/html2canvas.js" type="text/javascript" defer></script> 
+    <script src="js/qrCode.js" type="text/javascript" defer></script>
     <script src="main.js" defer></script>
-    <title>Easy-QR-Generator</title>
+    <title>Easy-QR</title>
 </head>
 <body>
-    <h1 class="titulo">EASY-QR</h1>
-    <h3>Generador gratuito de código QR</h3>
-    <textarea id="inputInfo" placeholder="Ingrese el texto que quiere convertir..."></textarea>
-    <button type="button" id="BOTON">Generar QR</button>
-    <div id="qrcode"></div>
-    <button type="button" id="BOTON-OTRO">Generar nuevo QR</button>
+    <div class="titulo">
+        <h1 class="titulo">EASY-QR</h1>
+        <h3>GENERADOR GRATUITO DE CÓDIGO QR</h3>
+    </div>
+    <div class="main-container">
+        <textarea id="inputInfo" placeholder="Ingrese el texto que quiere convertir..."></textarea>
+        <button type="button" class="boton" id="BOTON">Generar QR</button>
+        <div id="qrcode"></div>
+        <button type="button" class="boton" id="BOTON-DESCARGAR">Descargar QR</button>
+    </div>
+    <button type="button" class="boton" id="BOTON-OTRO">Generar nuevo QR</button>
 </body>
 </html>

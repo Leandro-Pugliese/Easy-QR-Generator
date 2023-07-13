@@ -1,4 +1,3 @@
-import saveAs from "./js/fileSaver"
 const info = document.querySelectorAll("#inputInfo");
 const boton = document.querySelectorAll("#BOTON");
 const boton_otro = document.querySelectorAll("#BOTON-OTRO");
@@ -8,7 +7,7 @@ const boton_descargar = document.querySelectorAll("#BOTON-DESCARGAR");
 let data = "";
 let colorPrincipal = "";
 let colorBase = "";
-
+    
 boton.forEach((boton) => {
     boton.addEventListener("click", () => {
         // Obtención del value del input.

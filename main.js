@@ -1,3 +1,4 @@
+import saveAs from "./js/fileSaver"
 const info = document.querySelectorAll("#inputInfo");
 const boton = document.querySelectorAll("#BOTON");
 const boton_otro = document.querySelectorAll("#BOTON-OTRO");

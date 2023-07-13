@@ -25,8 +25,8 @@ boton.forEach((boton) => {
         // Generación código QR
         new QRCode(document.getElementById("qrcode"), {
             text: data,
-            width: 250,
-            height: 250,
+            width: 256,
+            height: 256,
             colorDark: colorPrincipal,
             colorLight: colorBase,
         });

@@ -1,4 +1,3 @@
-// Aca comienza el código de nuestra aplicación.
 const info = document.querySelectorAll("#inputInfo");
 const boton = document.querySelectorAll("#BOTON");
 const boton_otro = document.querySelectorAll("#BOTON-OTRO");

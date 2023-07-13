@@ -63,7 +63,7 @@ boton_descargar.forEach((boton_descargar) => {
     const descargarQr = () => {
         html2canvas(document.getElementById("qrcode"), {
             onrendered: function(canvas) {
-                theCanvas = canvas;
+                //let theCanvas = canvas;
                 document.body.appendChild(canvas)
                 canvas.toBlob(function(blob) {
                   saveAs(blob, "Qr.png")

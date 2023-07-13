@@ -3,22 +3,40 @@ const boton = document.querySelectorAll("#BOTON");
 const boton_otro = document.querySelectorAll("#BOTON-OTRO");
 const boton_descargar = document.querySelectorAll("#BOTON-DESCARGAR");
 
+// Variables para transferencia de datos.
 let data = "";
+let colorPrincipal = "";
+let colorBase = "";
 
 boton.forEach((boton) => {
     boton.addEventListener("click", () => {
+        // Obtención del value del input.
         info.forEach((info) => {
             data = info.value;
         });
         
+        if (data === "") {
+            return alert("¡No ingresaste texto!");
+        }
+        // Obtención de datos de color personalizado.
+        colorPrincipal = document.getElementById("colorPrincipal").value;
+        colorBase = document.getElementById("colorBase").value;
+        
+        // Generación código QR
         new QRCode(document.getElementById("qrcode"), {
             text: data,
-            width: 250,
-            height: 250,
-            colorDark: "black",
-            colorLight: "white",
+            width: 200,
+            height: 200,
+            colorDark: colorPrincipal,
+            colorLight: colorBase,
         });
-
+        
+        // Modificación de visibilidad de los contenedores.
+        document.getElementById("containerText").style.display = "none"
+        document.getElementById("container-generar").style.display = "none"
+        document.getElementById("containerQr").style.display = "flex"
+        document.getElementById("containerQr").style.justifyContent = "center"
+        document.getElementById("container-descargar").style.display = "flex"
         boton_otro.forEach((boton_otro) => {
             boton_otro.style.display = "inline";
             boton.style.display = "none";

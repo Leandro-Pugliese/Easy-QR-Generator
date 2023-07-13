@@ -18,16 +18,56 @@
     <title>Easy-QR</title>
 </head>
 <body>
+    <header class="header"></header>
     <div class="titulo">
         <h1 class="titulo">EASY-QR</h1>
         <h3>GENERADOR GRATUITO DE CÓDIGO QR</h3>
     </div>
     <div class="main-container">
-        <textarea id="inputInfo" placeholder="Ingrese el texto que quiere convertir..."></textarea>
-        <button type="button" class="boton" id="BOTON">Generar QR</button>
-        <div id="qrcode"></div>
-        <button type="button" class="boton" id="BOTON-DESCARGAR">Descargar QR</button>
+        <div class="container-1" id="containerText">
+            <textarea id="inputInfo" placeholder="Ingrese el texto que quiere convertir..."></textarea>
+            <div class="container-select">
+                <label>Color Principal: </label>
+                <select class="elegir-color" id="colorPrincipal">
+                    <option value="black"> Negro </option>
+                    <option value="white"> Blanco </option>
+                    <option value="red"> Rojo </option>
+                    <option value="green"> Verde </option>
+                    <option value="blue"> Azul </option>
+                    <option value="yellow"> Amarillo </option>
+                    <option value="grey"> Gris </option>
+                    <option value="rebeccapurple"> Violeta </option>
+                </select>
+            </div>
+            <div class="container-select">
+                <label>Color Base: </label>
+                <select class="elegir-color" id="colorBase">
+                    <option value="white"> Blanco </option>
+                    <option value="black"> Negro </option>
+                    <option value="red"> Rojo </option>
+                    <option value="green"> Verde </option>
+                    <option value="blue"> Azul </option>
+                    <option value="yellow"> Amarillo </option>
+                    <option value="grey"> Gris </option>
+                    <option value="rebeccapurple"> Violeta </option>
+                </select>
+            </div>
+        </div>
+        <div class="container-2" id="container-generar">
+            <button type="button" class="boton" id="BOTON">Generar QR</button>
+        </div>
+        <div class="container-1" id="containerQr">
+            <div id="qrcode"></div>
+        </div>
+        <div class="container-2" id="container-descargar">
+            <button type="button" class="boton" id="BOTON-DESCARGAR">Descargar QR</button>
+        </div>
     </div>
-    <button type="button" class="boton" id="BOTON-OTRO">Generar nuevo QR</button>
+    <div class="container-2">
+        <button type="button" class="boton" id="BOTON-OTRO">Generar nuevo QR</button>
+    </div>
+    <footer class="footer">
+        <a href="https://www.leandro-pugliese.com/">Copyright©Leandro-Pugliese</a>
+    </footer>
 </body>
 </html>

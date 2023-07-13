@@ -1,6 +1,8 @@
+/* GENERAL */
 html {
     height: 100%;
     width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
@@ -16,30 +18,96 @@ body {
     color: whitesmoke;
 }
 
+/* HEADER */
+.header {
+    height: 10%;
+    width: 100%;
+}
+
+/* CUERPO */
 .titulo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10%;
-    background-color: red;
+    height: 15%;
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 50%;
-    background-color: rebeccapurple;
 }
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    height: 70%;
+    margin: 1%;
+}
+
 #inputInfo {
-    width: 25%;
-    height: 10%;
+    width: 80%;
+    height: 60%;
     margin: 15px;
     border-radius: 5px;
+}
+
+#containerQr {
+    display: none;
+}
+
+#qrcode {
+    margin: 15px;
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 10%;
+}
+
+#container-descargar {
+    display: none;
+}
+
+.container-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 20%;
+    background-color: white;
+    padding: 2px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    color: black;
+}
+
+.container-select label {
+    width: 50%;
+    padding: 1%;
+    font-size: large;
+}
+
+.container-select select {
+    width: 50%;
+    padding: 1%; 
+    background-color: white;
+    border: solid 1px gainsboro;
+    border-radius: 4px;
+    font-size: medium;   
+    margin-right: 5px;
 }
 
 .boton {
@@ -51,6 +119,7 @@ body {
     font-size: large;
     font-weight: 500;
 }
+
 .boton:hover {
     background-color: blue;
     color: whitesmoke;
@@ -71,4 +140,26 @@ body {
 
 canvas {
     display: none;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+}
+
+.footer a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: large;
+}
+
+.footer a:hover {
+    scale: 1.1;
 }

@@ -190,6 +190,10 @@ canvas {
 
 /* Queries para Mobile */
 @media (max-width: 1030px) {
+    /* GENERAL */
+    canvas {
+        visibility: hidden;
+    }
     /* HEADER */
     .header a {
         margin-top: 1px;

@@ -69,14 +69,19 @@ boton_descargar.forEach((boton_descargar) => {
     const descargarQr = () => {
         html2canvas(document.getElementById("qrcode"), {
             onrendered: function(canvas) {
-                //let theCanvas = canvas;
+                //theCanvas = canvas;
                 document.body.appendChild(canvas)
                 canvas.toBlob(function(blob) {
                   saveAs(blob, "Qr.png")
                 });
             }
         });
-    }
+        const imgQr = document.querySelectorAll("div.code-qr > canvas");
+        imgQr.forEach((canvas) => {
+            console.log(canvas)
+            canvas.style.display = "none";
+        })
+    };
     boton_descargar.addEventListener("click", descargarQr);
 });
 

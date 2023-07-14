@@ -65,8 +65,10 @@ boton_descargar.forEach((boton_descargar) => {
             onrendered: function(canvas) {
                 //theCanvas = canvas;
                 document.body.appendChild(canvas)
+                // Modificamos el texto en data para que no se repita el nombre del archivo en la descarga.
+                let textoDescarga = data.replaceAll(' ', '-')
                 canvas.toBlob(function(blob) {
-                  saveAs(blob, "Qr.png")
+                  saveAs(blob, `Qr-${textoDescarga}-.png`)
                 });
             }
         });

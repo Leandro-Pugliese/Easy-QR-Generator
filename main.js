@@ -37,11 +37,12 @@ boton.forEach((boton) => {
         document.getElementById("containerQr").style.display = "flex"
         document.getElementById("containerQr").style.justifyContent = "center"
         document.getElementById("container-descargar").style.display = "flex"
-        const imgQr = document.querySelectorAll("div.code-qr > img");
-        imgQr.forEach((img) => {
-            console.log(img)
-            img.style.display = "block";
-        })
+        // const imgQr = document.querySelectorAll("div.code-qr > img");
+        // imgQr.forEach((img) => {
+        //     console.log(img)
+        //     img.style.display = "block";
+        //     img.style.alt = "none"; 
+        // })
         boton_otro.forEach((boton_otro) => {
             boton_otro.style.display = "inline";
             boton.style.display = "none";

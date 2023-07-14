@@ -158,9 +158,12 @@ body {
     display: none;
 }
 
-/* canvas {
+img {
+    display: block;
+}
+canvas {
     display: none;
-} */
+}
 
 /* FOOTER */
 .footer {

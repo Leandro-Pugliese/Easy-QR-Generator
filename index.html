@@ -2,34 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1, user-scalable=0" />
     <link rel="stylesheet" href="main.css" type="text/css">
-    <!-- Archivo .js por cdn para generar QR -->
-    <!-- <script 
-        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" 
-        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" 
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer">
-    </script> -->
     <script src="js/fileSaver.js" type="text/javascript" defer></script>
     <script src="js/html2canvas.js" type="text/javascript" defer></script> 
     <script src="js/qrCode.js" type="text/javascript" defer></script>
-    <script src="main.js"  defer></script>
+    <script src="main.js" type="text/javascript" defer></script>
     <title>Easy-QR</title>
 </head>
 <body>
     <header class="header">
         <a href="https://www.youtube.com/watch?v=BqLfqOmaBVY">Video-Tutorial (Ayuda)</a>
     </header>
-    <div class="titulo">
-        <h1 class="titulo">EASY - QR</h1>
-        <h3>GENERADOR GRATUITO DE CÓDIGO QR</h3>
+    <div class="titulo__container">
+        <h1 class="titulo__text">EASY - QR</h1>
+        <h3 class="titulo__subtitle">Generador gratuito de código QR</h3>
     </div>
     <div class="main-container">
         <div class="container-1" id="containerText">
             <textarea id="inputInfo" placeholder="Ingrese el texto que quiere convertir..."></textarea>
             <div class="container-select">
-                <label>Color Principal: </label>
+                <label> Color Principal: </label>
                 <select class="elegir-color" id="colorPrincipal">
                     <option value="black"> Negro </option>
                     <option value="white"> Blanco </option>
@@ -42,7 +35,7 @@
                 </select>
             </div>
             <div class="container-select">
-                <label>Color Base: </label>
+                <label> Color Base: </label>
                 <select class="elegir-color" id="colorBase">
                     <option value="white"> Blanco </option>
                     <option value="black"> Negro </option>
@@ -65,11 +58,11 @@
             <button type="button" class="boton" id="BOTON-DESCARGAR">Descargar QR</button>
         </div>
     </div>
-    <div class="container-2">
+    <div class="container-2" id="boton__generar-otro">
         <button type="button" class="boton" id="BOTON-OTRO">Generar nuevo QR</button>
     </div>
     <footer class="footer">
-        <a href="https://www.leandro-pugliese.com/">Copyright©Leandro-Pugliese</a>
+        <a href="https://www.leandro-pugliese.com/">&copy; Leandro Pugliese 2023</a>
     </footer>
 </body>
 </html>

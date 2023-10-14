@@ -1,20 +1,16 @@
 /* GENERAL */
 html {
-    height: 100%;
-    width: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: block;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(45deg, rgba(0,4,89,1) 15%, rgba(0,0,166,1) 60%, rgba(0,180,217,1) 100%);
-    margin: 0px 0px;
+    margin: 0;
     color: whitesmoke;
 }
 
@@ -25,15 +21,16 @@ body {
     align-items: center;
     height: 10%;
     width: 100%;
+    font-size: 1.5rem;
 }
 
 .header a {
     text-decoration: none;
     color: white;
-    font-weight: 600;
-    margin-top: 10px;
-    margin-right: 50px;
-    padding: 5px;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-right: 5rem;
+    padding: 1rem;
 }
 
 .header a:hover {
@@ -41,13 +38,22 @@ body {
 }
 
 /* CUERPO */
-.titulo {
+.titulo__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 15%;
+}
+
+.titulo__text {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+.titulo__subtitle {
+    font-size: 1.8rem;
+    margin-top: 1rem;
 }
 
 .main-container {
@@ -72,16 +78,19 @@ body {
 #inputInfo {
     width: 80%;
     height: 60%;
-    margin: 15px;
-    border-radius: 5px;
+    margin: 1.5rem;
+    border-radius: 0.6rem;
+    resize: none;
+    outline: none;
 }
 
 #containerQr {
     display: none;
 }
 
-#qrcode {
-    margin: 15px;
+#qrcode img {
+    width: 28rem;
+    height: 28rem;
 }
 
 .container-2 {
@@ -104,9 +113,9 @@ body {
     width: 40%;
     height: 20%;
     background-color: white;
-    padding: 2px;
-    border-radius: 4px;
-    margin-bottom: 7px;
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    margin-bottom: 0.7rem;
     color: black;
 }
 
@@ -124,16 +133,16 @@ body {
     border: solid 1px gainsboro;
     border-radius: 5px;
     font-size: medium;   
-    margin-right: 5px;
+    margin-right: 0.5rem;
     cursor: pointer;
     color: white;
 }
 
 
 .boton {
-    margin: 10px;
-    padding: 5px;
-    border-radius: 4px;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
     background-color: white;
     border: solid 1px gainsboro;
     font-size: large;
@@ -158,6 +167,10 @@ body {
     display: none;
 }
 
+#boton__generar-otro {
+    width: 100%;
+}
+
 img {
     display: block;
 }
@@ -167,6 +180,8 @@ img {
 
 /* FOOTER */
 .footer {
+    position: fixed;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -176,7 +191,7 @@ img {
 }
 
 .footer a {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     text-decoration: none;
     color: whitesmoke;
     font-weight: 500;
@@ -192,14 +207,23 @@ img {
 @media (max-width: 1030px) {
     /* HEADER */
     .header a {
-        margin-top: 1px;
-        margin-right: 20px;
+        margin-top: 0.1rem;
+        margin-right: 2rem;
         font-size: small;
+    }
+
+    .titulo__container {
+        min-height: 10rem;
     }
 
     /* CUERPO */
     .container-1 {
         width: 90%;
+        min-height: 25rem;
+    }
+
+    .container-2 {
+        min-height: 5rem;
     }
 
     #inputInfo {
@@ -211,7 +235,15 @@ img {
         width: 80%;    
     }
 
+    #qrcode img {
+        width: 22rem;
+        height: 22rem;
+    }
+
     /* FOOTER */
+    .footer {
+        max-height: 10rem;
+    }
     .footer a {
         font-size: small;
     }

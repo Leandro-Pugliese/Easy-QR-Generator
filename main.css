@@ -14,7 +14,7 @@ body {
     color: whitesmoke;
 }
 
-/* Fix para el bug de descarga de los QR */
+/* Fix para el bug de descarga de los QR en la PC */
 canvas {
     display: none;
 }
@@ -179,9 +179,7 @@ canvas {
 img {
     display: block;
 }
-/* canvas {
-    display: none;
-} */
+
 
 /* FOOTER */
 .footer {
@@ -210,6 +208,10 @@ img {
 
 /* Queries para Mobile */
 @media (max-width: 1030px) {
+    /* Fix para el bug de descarga de los QR en mobile */
+    .code-qr canvas {
+        display: block;
+    }
     /* HEADER */
     .header a {
         margin-top: 0.1rem;

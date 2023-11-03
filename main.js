@@ -25,8 +25,8 @@ boton.forEach((boton) => {
         // Generación código QR
         new QRCode(document.getElementById("qrcode"), {
             text: data,
-            width: 256,
-            height: 256,
+            width: 280,
+            height: 280,
             colorDark: colorPrincipal,
             colorLight: colorBase,
         });
@@ -68,14 +68,14 @@ boton_descargar.forEach((boton_descargar) => {
                 // Modificamos el texto en data para que no se repita el nombre del archivo en la descarga.
                 let textoDescarga = data.replaceAll(' ', '-')
                 canvas.toBlob(function(blob) {
-                  saveAs(blob, `Qr-${textoDescarga}-.png`)
+                  saveAs(blob, `Qr-${textoDescarga}.png`)
                 });
             }
         });
-        setTimeout(() => {
-            alert("QR Descargado")
-            window.location.reload()
-        }, 100);
+        // setTimeout(() => {
+        //     alert("QR Descargado")
+        //     window.location.reload()
+        // }, 100);
     };
     boton_descargar.addEventListener("click", descargarQr);
 });

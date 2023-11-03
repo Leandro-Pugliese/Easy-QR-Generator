@@ -14,6 +14,11 @@ body {
     color: whitesmoke;
 }
 
+/* Fix para el bug de descarga de los QR */
+canvas {
+    display: none;
+}
+
 /* HEADER */
 .header {
     display: flex;

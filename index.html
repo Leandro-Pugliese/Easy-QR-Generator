@@ -12,8 +12,10 @@
      crossorigin="anonymous"></script>
     <title>Easy-QR</title>
 </head>
-<body>
+<body id="body">
     <header class="header">
+        <button type="button" id="cambiar-fondo"> Cambiar fondo fijo</button>
+        <button type="button" id="fondo-automatico"> Desactivar Fondo Automático </button>
         <a href="https://www.youtube.com/watch?v=BqLfqOmaBVY">Video-Tutorial (Ayuda)</a>
     </header>
     <div class="titulo__container">
@@ -50,21 +52,24 @@
                 </select>
             </div>
         </div>
+        <div class="container__mensajeError" id="container__mensajeError">
+            <p id="mensaje-error">aaa</p>
+        </div>
         <div class="container-2" id="container-generar">
-            <button type="button" class="boton" id="BOTON"> Generar QR </button>
+            <button type="button" class="boton" id="boton"> Generar QR </button>
         </div>
         <div class="container-1" id="containerQr">
             <div id="qrcode" class="code-qr"></div>
         </div>
         <div class="container-2" id="container-descargar">
-            <button type="button" class="boton" id="BOTON-DESCARGAR"> Descargar QR </button>
+            <button type="button" class="boton" id="boton-descargar"> Descargar QR </button>
         </div>
     </div>
     <div class="container-2" id="boton__generar-otro">
-        <button type="button" class="boton" id="BOTON-OTRO"> Generar nuevo QR </button>
+        <button type="button" class="boton" id="boton-otro"> Generar nuevo QR </button>
     </div>
     <footer class="footer">
-        <a href="https://www.leandro-pugliese.com/"> &copy; Leandro Pugliese 2023 </a>
+        <a href="https://www.leandro-pugliese.com/"> &copy; Leandro Pugliese 2024 </a>
     </footer>
 </body>
 </html>

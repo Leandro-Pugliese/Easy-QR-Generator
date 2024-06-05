@@ -9,7 +9,10 @@ body {
     width: 100%;
     height: 100vh;
     min-height: 100vh;
-    background: linear-gradient(45deg, rgba(0,4,89,1) 15%, rgba(0,0,166,1) 60%, rgba(0,180,217,1) 100%);
+    background-image: url(./assests/imagenes/horizonte.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: linear-gradient(45deg, rgba(0,4,89,1) 15%, rgba(0,0,166,1) 60%, rgba(0,180,217,1) 100%); */
     margin: 0;
     color: whitesmoke;
 }
@@ -31,7 +34,7 @@ canvas {
 
 .header a {
     text-decoration: none;
-    color: white;
+    color:white;
     font-weight: bold;
     margin-top: 2rem;
     margin-right: 5rem;
@@ -40,6 +43,25 @@ canvas {
 
 .header a:hover {
     scale: 1.1;
+}
+
+.header button {
+    color:white;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-right: 5rem;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+}
+
+.header button:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+#cambiar-fondo {
+    display: none;
 }
 
 /* CUERPO */
@@ -107,6 +129,21 @@ canvas {
     height: 10%;
 }
 
+.container__mensajeError {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 10%;
+}
+
+.container__mensajeError p {
+    display: none;
+    color: red;
+    font-size: medium;
+}
+
 #container-descargar {
     display: none;
 }
@@ -160,15 +197,15 @@ canvas {
     cursor: pointer;
 }
 
-#BOTON {
+#boton {
     display: inline;
 }
 
-#BOTON-OTRO {
+#boton-otro {
     display: none;
 }
 
-#BOTON-DESCARGAR {
+#boton-descargar {
     display: none;
 }
 

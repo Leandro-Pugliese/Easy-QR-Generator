@@ -99,11 +99,13 @@ const nuevoQr = () => {
        canvas_qr_container.children[indice].style.display = "none";
        canvas_qr_container.children[indiceCanvas].style.display = "none";
        indice += 2;
+       indiceCanvas += 2
        contadorIndice ++;
     } else {
         canvas_qr_container.children[indice].style.display = "none";
         canvas_qr_container.children[indiceCanvas].style.display = "none";
         indice += 2;
+        indiceCanvas += 2
         contadorIndice ++;
     }
     contadorBotonSiguiente = 0

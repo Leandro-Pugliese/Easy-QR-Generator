@@ -90,9 +90,6 @@ canvas {
     margin-top: 3.4rem;
     margin-left: 23.5rem;
 }
-.menu__desplegable {
-    display: none;
-}
 /* CUERPO */
 .titulo__container {
     display: flex;
@@ -291,54 +288,14 @@ img {
         display: block;
     }
     /* HEADER */
-    .header-desplegable {
-        display: none;
-    }
-    .menu__desplegable {
-        display: flex;
-        flex-direction: column;
-    }
-    .menu__desplegable svg {
-        position: fixed;
-        top: 4rem;
-        right: 7.5rem;
-    }
-    .menu__desplegable svg:hover {
-        cursor: pointer;
-        scale: 1.1;
-    }
-    .menu__desplegable svg:active {
-        scale: 0.9;
-    }
-    .menu__lista-close {
-        display: none;
-        z-index: 10;
-    }
-    .ul__menu-desplegable {
-        position: fixed;
-        right: 0rem;
-        top: 1.5rem;
-        width: 26rem;
-        margin-right: 5rem;
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(88, 88, 88, 1);
-        border: solid 1rem rgba(88, 88, 88, 1);
-        border-radius: 1rem;
-    }
     .header a {
         position: relative;
-        top: 1.5rem;
+        top: 0.5rem;
     }
     .button-header {
         position: relative;
         top: 0.5rem;
         text-align: left;
-    }
-    #cambiar-fondo__desplegable {
-        position: relative;
-        top: -0.5rem;
-        display: none;
     }
     /* CUERPO */
     .titulo__container {
@@ -346,8 +303,6 @@ img {
     }
     .titulo__subtitle {
         width: 80%;
-        background-color: rgba(136, 136, 136, 0.637);
-        border-radius: 2rem;
         font-size: 1.2rem;
         padding: 1rem;
         text-align: center;
@@ -386,7 +341,6 @@ img {
         font-size: small;
     }
 }
-
 @media (max-width: 600px) {
     #svg-qr {
         display: none;
@@ -395,24 +349,15 @@ img {
         margin-left: 4rem;
         font-size: small;
     }
-    .menu__desplegable svg {
-        right: 4rem;
-    }
-    .ul__menu-desplegable {
-        position: fixed;
-        right: 2.5rem;
-        top: 1.3rem;
-        width: 23rem;
-        margin-right: 0rem;
-    }
     .button-header {
-        font-size: smaller;
+        font-size: small;
     }
     .header a {
-        font-size: smaller;
+        font-size: x-small  ;
     }
     .container-2 {
-       flex-direction: column;
+        margin-top: 1rem;
+        flex-direction: column;
     }
 }
 

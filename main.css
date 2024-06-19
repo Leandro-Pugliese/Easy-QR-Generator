@@ -1,24 +1,40 @@
 /* GENERAL */
 html {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10px;
 }
-
 body {
     display: block;
     width: 100%;
     height: 100vh;
     min-height: 100vh;
-    background: linear-gradient(45deg, rgba(0,4,89,1) 15%, rgba(0,0,166,1) 60%, rgba(0,180,217,1) 100%);
+    background-image: url(./assests/imagenes/horizonte.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     color: whitesmoke;
+    transition: background-image 1.8s ease-in-out; /* Animación para cambio de imagen */
 }
-
 /* Fix para el bug de descarga de los QR en la PC */
 canvas {
     display: none;
 }
-
+/* Clases para mostrar y esconder elementos con animación */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.8s ease, visibility 0.5s ease;
+}
+.visible {
+    opacity: 0.7;
+    visibility: visible;
+    transition: opacity 1.8s ease, visibility 0.5s ease;
+}
+.visible2 {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1.8s ease, visibility 0.5s ease;
+}
 /* HEADER */
 .header {
     display: flex;
@@ -28,20 +44,55 @@ canvas {
     width: 100%;
     font-size: 1.5rem;
 }
-
 .header a {
     text-decoration: none;
-    color: white;
+    color:white;
     font-weight: bold;
     margin-top: 2rem;
     margin-right: 5rem;
     padding: 1rem;
+    font-size: 1.3rem;
 }
-
 .header a:hover {
     scale: 1.1;
 }
-
+.header a:active {
+    scale: 0.9;
+}
+.button-header {
+    color:white;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-right: 5rem;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+}
+.button-header:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+.button-header:active {
+    scale: 0.9;
+}
+#iniciar-app {
+    position: fixed;
+    left: 0;
+    margin-top: 3.5rem;
+    margin-left: 11rem;
+    font-size: medium;
+    border: solid 0.1rem whitesmoke;
+    border-radius: 5rem;
+}
+#svg-qr {
+    position: fixed;
+    left: 0;
+    margin-top: 3.4rem;
+    margin-left: 23.5rem;
+}
+.menu__desplegable {
+    display: none;
+}
 /* CUERPO */
 .titulo__container {
     display: flex;
@@ -51,7 +102,6 @@ canvas {
     width: 100%;
     height: 15%;
 }
-
 .titulo__text {
     font-size: 5rem;
     margin-bottom: 1rem;
@@ -60,7 +110,6 @@ canvas {
     font-size: 1.8rem;
     margin-top: 1rem;
 }
-
 .main-container {
     display: flex;
     flex-direction: column;
@@ -69,7 +118,6 @@ canvas {
     width: 100%;
     height: 50%;
 }
-
 .container-1 {
     display: flex;
     flex-direction: column;
@@ -79,7 +127,25 @@ canvas {
     height: 70%;
     margin: 1%;
 }
-
+.container-1 button {
+    display: flex;
+    color:white;
+    font-weight: bold;
+    text-align: justify;
+    background-color: rgba(78, 78, 78, 0.726);
+    border: 0.1rem solid rgba(78, 78, 78, 0.726);
+    border-radius: 0.7rem;
+    font-size: small;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+.container-1 button:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+.container-1 button:active {
+    scale: 0.9;
+}
 #inputInfo {
     width: 80%;
     height: 60%;
@@ -87,18 +153,27 @@ canvas {
     border-radius: 0.6rem;
     resize: none;
     outline: none;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    padding-left: 0.8rem;
+    padding-top: 0.5rem;
 }
-
 #containerQr {
     display: none;
 }
-
 #qrcode img {
     width: 28rem;
     height: 28rem;
 }
-
 .container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 20%;
+}
+.container__mensajeError {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,81 +181,84 @@ canvas {
     width: 50%;
     height: 10%;
 }
-
+.container__mensajeError p {
+    display: none;
+    color: red;
+    font-size: medium;
+    font-weight: bold;
+    background-color: rgba(224, 224, 224, 0.822);
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+}
 #container-descargar {
     display: none;
 }
-
+.container__select-general {
+    position: fixed;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
 .container-select {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
-    height: 20%;
-    background-color: white;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
     padding: 0.2rem;
     border-radius: 0.4rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 1.5rem;
     color: black;
 }
-
 .container-select label {
-    width: 50%;
-    padding: 1%;
+    width: 100%;
+    padding: 1rem;
     font-size: large;
 }
-
 .container-select select {
     width: 50%;
     padding: 1%; 
-    background: linear-gradient(45deg, rgba(0,4,89,1) 11%, rgba(0,0,166,1) 40%, rgba(0,180,217,1) 100%);
-    background-color: rgba(0,0,166,1);
-    border: solid 1px gainsboro;
+    background: linear-gradient(45deg, rgba(78, 78, 78, 1) 11%, rgb(79, 79, 80) 40%, rgb(152, 154, 155) 100%);
+    background-color: rgba(78, 78, 78, 0.664);
+    border: solid 1px rgba(78, 78, 78, 0.664);
     border-radius: 5px;
     font-size: medium;   
     margin-right: 0.5rem;
     cursor: pointer;
     color: white;
 }
-
-
 .boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
     margin: 1rem;
     padding: 0.5rem;
-    border-radius: 0.4rem;
-    background-color: white;
-    border: solid 1px gainsboro;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(78, 78, 78, 0.664);
+    border: solid 0.1rem whitesmoke;
     font-size: large;
     font-weight: 500;
 }
-
 .boton:hover {
-    background-color: dodgerblue;
-    color: whitesmoke;
+    scale: 1.1;
     cursor: pointer;
 }
-
-#BOTON {
+.boton:active {
+    scale: 1.0
+}
+#boton {
     display: inline;
 }
-
-#BOTON-OTRO {
-    display: none;
-}
-
-#BOTON-DESCARGAR {
-    display: none;
-}
-
 #boton__generar-otro {
     width: 100%;
 }
-
 img {
     display: block;
 }
-
-
 /* FOOTER */
 .footer {
     position: fixed;
@@ -192,7 +270,6 @@ img {
     height: 15%;
     width: 100%;
 }
-
 .footer a {
     margin-bottom: 2rem;
     text-decoration: none;
@@ -200,53 +277,107 @@ img {
     font-weight: 500;
     font-size: large;
 }
-
 .footer a:hover {
     scale: 1.1;
 }
+.footer a:active {
+    scale: 0.9;
+}
 
-
-/* Queries para Mobile */
-@media (max-width: 1030px) {
+/* Queries para Tablet y Mobile */
+@media (max-width: 1050px) {
     /* Fix para el bug de descarga de los QR en mobile */
     .code-qr canvas {
         display: block;
     }
     /* HEADER */
-    .header a {
-        margin-top: 0.1rem;
-        margin-right: 2rem;
-        font-size: small;
+    .header-desplegable {
+        display: none;
     }
-
+    .menu__desplegable {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu__desplegable svg {
+        position: fixed;
+        top: 4rem;
+        right: 7.5rem;
+    }
+    .menu__desplegable svg:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+    .menu__desplegable svg:active {
+        scale: 0.9;
+    }
+    .menu__lista-close {
+        display: none;
+        z-index: 10;
+    }
+    .ul__menu-desplegable {
+        position: fixed;
+        right: 0rem;
+        top: 1.5rem;
+        width: 26rem;
+        margin-right: 5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(88, 88, 88, 1);
+        border: solid 1rem rgba(88, 88, 88, 1);
+        border-radius: 1rem;
+    }
+    .header a {
+        position: relative;
+        top: 1.5rem;
+    }
+    .button-header {
+        position: relative;
+        top: 0.5rem;
+        text-align: left;
+    }
+    #cambiar-fondo__desplegable {
+        position: relative;
+        top: -0.5rem;
+        display: none;
+    }
+    /* CUERPO */
     .titulo__container {
         min-height: 10rem;
     }
-
-    /* CUERPO */
+    .titulo__subtitle {
+        width: 80%;
+        background-color: rgba(136, 136, 136, 0.637);
+        border-radius: 2rem;
+        font-size: 1.2rem;
+        padding: 1rem;
+        text-align: center;
+    }
     .container-1 {
         width: 90%;
         min-height: 25rem;
     }
-
     .container-2 {
         min-height: 5rem;
     }
-
     #inputInfo {
         width: 100%;
         height: 70%;
     }
-
     .container-select {
         width: 80%;    
     }
-
+    .container__select-general {
+        margin-top: 7rem;
+        width: 90%;
+        align-items: center;
+    }
     #qrcode img {
         width: 22rem;
         height: 22rem;
     }
-
+    .container-2 {
+        width: 80%;
+    }
     /* FOOTER */
     .footer {
         max-height: 10rem;
@@ -255,3 +386,34 @@ img {
         font-size: small;
     }
 }
+
+@media (max-width: 600px) {
+    #svg-qr {
+        display: none;
+    }
+    #iniciar-app {
+        margin-left: 4rem;
+        font-size: small;
+    }
+    .menu__desplegable svg {
+        right: 4rem;
+    }
+    .ul__menu-desplegable {
+        position: fixed;
+        right: 2.5rem;
+        top: 1.3rem;
+        width: 23rem;
+        margin-right: 0rem;
+    }
+    .button-header {
+        font-size: smaller;
+    }
+    .header a {
+        font-size: smaller;
+    }
+    .container-2 {
+       flex-direction: column;
+    }
+}
+
+

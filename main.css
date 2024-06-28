@@ -357,6 +357,9 @@ img {
     .header a {
         font-size: x-small  ;
     }
+    .main-container {
+        margin-top: 2rem;
+    }
     .container-2 {
         margin-top: 1rem;
         flex-direction: column;

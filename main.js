@@ -42,13 +42,10 @@ const siguientePaso = () => {
         //Muestro los select colores
         select_colores.classList.remove('hidden');
         select_colores.classList.add('visible');
-        console.log(select_colores.classList)
         //Modifico el texto del boton.
         boton_siguiente.innerHTML = `Generar QR`
         contadorBotonSiguiente ++
-        console.log(contadorBotonSiguiente)
     } else if (contadorBotonSiguiente === 1) { //Generar el QR
-        console.log("entre a generar el qr")
         // Obtención de datos de color personalizado.
         colorPrincipal = document.getElementById("colorPrincipal").value;
         colorBase = document.getElementById("colorBase").value;
